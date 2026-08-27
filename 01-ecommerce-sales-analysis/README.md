@@ -1,1 +1,62 @@
 # Global E-commerce Sales & Customer Analytics
+## Project Overview
+This project analyzes e-commerce sales data to understand revenue, profitability, customer behavior, product performance, and geographic performance.
+The goal is to use data analysis to identify business trends and opportunities that could support better commercial decision-making.
+## Business Problem
+The company wants to understand:
+- How sales and profit are performing over time
+- Which products and categories generate the most revenue
+- Which customer segments are most valuable
+- Which countries and regions perform best
+- Where there may be opportunities to improve profitability
+## Business Questions
+### Sales Performance
+- What is the total sales revenue?
+- How does revenue change over time?
+- Which products and categories generate the most sales?
+### Profitability
+- What is total profit?
+- Which products and categories generate the most profit?
+- Which areas have strong sales but weak profitability?
+### Customer Analysis
+- Which customer segments generate the most revenue?
+- Which customer segments generate the most profit?
+- What is the average order value?
+### Geographic Analysis
+- Which countries generate the most revenue?
+- Which regions are most profitable?
+- Are there geographic markets that deserve further attention?
+## Dataset
+The dataset contains e-commerce transaction information including:
+- Order ID
+- Order date
+- Customer name
+- Customer segment
+- Country
+- Region
+- Product category
+- Product name
+- Quantity
+- Unit price
+- Discount percentage
+- Total sales
+- Shipping cost
+- Profit
+- Payment method
+The dataset contains 2,000 transactions covering 2023–2025.
+## Tools
+- SQL
+- Excel
+- Data visualization
+- GitHub
+## Project Workflow
+1. Data quality assessment
+2. Data cleaning and validation
+3. Exploratory analysis
+4. SQL analysis
+5. Business insights
+6. Dashboard development
+7. Recommendations
+## Project Status
+🚧 In progress
+More analysis and visualizations will be added as the project develops.
