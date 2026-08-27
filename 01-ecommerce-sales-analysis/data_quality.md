@@ -14,11 +14,12 @@ A sales ratio was calculated as:
 ## Findings
 The 2,000 records fall into three clear groups:
 | Pattern | Number of Records |
-
+|---|---:|
 | Ratio approximately 1 | 1,706 |
 | Ratio approximately 0.1 | 178 |
 | Ratio approximately 10 | 116 |
 | **Total** | **2,000** |
+
 This indicates that the original `Total_Sales` field contains inconsistent scaling for 294 records.
 - 178 records appear to have sales values approximately 10 times too small.
 - 116 records appear to have sales values approximately 10 times too large.
