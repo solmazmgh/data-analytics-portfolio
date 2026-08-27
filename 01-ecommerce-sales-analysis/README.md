@@ -60,3 +60,15 @@ The dataset contains 2,000 transactions covering 2023–2025.
 ## Project Status
 🚧 In progress
 More analysis and visualizations will be added as the project develops.
+## SQL Analysis
+### 1. Sales by product Category
+***Business Question:***
+Which product categories generate the most sales?
+**SQL Query:**
+```sql
+select Product_Category,
+       sum(Total_Sales) as total_sales
+from `ecommerce-sales-portfolio.ecommerce_sales.sales`
+group by Product_Category
+order by total_sales desc;
+
