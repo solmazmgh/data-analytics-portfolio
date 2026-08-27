@@ -73,3 +73,19 @@ from `ecommerce-sales-portfolio.ecommerce_sales.sales`
 group by Product_Category
 order by total_sales desc;
 
+*Results:*
+
+| Product Category | Total Sales |
+|---|---:|
+| Furniture | 2,261,386.3 |
+| Technology | 1,189,778.8 |
+| Clothing & Accessories | 565,432.5 |
+| Office Supplies | 167,468.8 |
+
+*Key Insight:*  
+Furniture generated the highest total sales at 2,261,386.3, while Office Supplies generated the lowest at 167,468.8.
+
+*Business Relevance:*  
+This analysis helps identify which product categories contribute most to revenue and can support marketing prioritization and resource allocation.
+
+
