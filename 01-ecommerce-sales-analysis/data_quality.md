@@ -14,7 +14,7 @@ A sales ratio was calculated as:
 ## Findings
 The 2,000 records fall into three clear groups:
 | Pattern | Number of Records |
-|---|---:|
+
 | Ratio approximately 1 | 1,706 |
 | Ratio approximately 0.1 | 178 |
 | Ratio approximately 10 | 116 |
