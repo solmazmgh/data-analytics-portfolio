@@ -72,7 +72,7 @@ select Product_Category,
 from `ecommerce-sales-portfolio.ecommerce_sales.sales`
 group by Product_Category
 order by total_sales desc;
-
+```
 *Results:*
 
 | Product Category | Total Sales |
