@@ -64,6 +64,7 @@ More analysis and visualizations will be added as the project develops.
 ### 1. Sales by product Category
 ***Business Question:***
 Which product categories generate the most sales?
+
 **SQL Query:**
 ```sql
 select Product_Category,
