@@ -102,7 +102,17 @@ SELECT
 FROM `ecommerce-sales-portfolio.ecommerce_sales.sales`
 GROUP BY Product_Category
 ORDER BY total_profit DESC;
-```      
+```
+
+*Results:*
+
+| Product Category | Total Profit |
+|---|---:|
+| Furniture | 7,599,018 |
+| Technology | 4,334,601 |
+| Clothing & Accessories | 2,352,634 |
+| Office Supplies | 307,652 |
+
 *Key Insight:*
 Furniture generated the highest total profit at 7,599,018, followed by Technology at 4,334,601. Office Supplies generated the lowest total profit at 307,652.
 
