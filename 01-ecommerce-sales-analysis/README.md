@@ -88,4 +88,24 @@ Furniture generated the highest total sales at 2,261,386.3, while Office Supplie
 *Business Relevance:*  
 This analysis helps identify which product categories contribute most to revenue and can support marketing prioritization and resource allocation.
 
+### 2. Profit by Product Category
+
+**Business Question:**  
+Which product categories generate the most profit?
+
+**SQL Query:**
+
+```sql
+SELECT
+  Product_Category,
+  SUM(Profit) AS total_profit
+FROM `ecommerce-sales-portfolio.ecommerce_sales.sales`
+GROUP BY Product_Category
+ORDER BY total_profit DESC;
+```      
+*Key Insight:*
+Furniture generated the highest total profit at 7,599,018, followed by Technology at 4,334,601. Office Supplies generated the lowest total profit at 307,652.
+
+*Business Relevance:*
+Furniture is the strongest-performing category based on both total sales and total profit. This suggests that it may be an important category for marketing focus and operational planning. Office Supplies may require further investigation to understand its relatively low contribution.
 
