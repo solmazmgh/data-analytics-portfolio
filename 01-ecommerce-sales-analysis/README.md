@@ -60,6 +60,7 @@ The dataset contains 2,000 transactions covering 2023–2025.
 ## Project Status
 🚧 In progress
 More analysis and visualizations will be added as the project develops.
+
 ## SQL Analysis
 ### 1. Sales by product Category
 ***Business Question:***
@@ -103,7 +104,6 @@ FROM `ecommerce-sales-portfolio.ecommerce_sales.sales`
 GROUP BY Product_Category
 ORDER BY total_profit DESC;
 ```
-
 *Results:*
 
 | Product Category | Total Profit |
@@ -118,4 +118,97 @@ Furniture generated the highest total profit at 7,599,018, followed by Technolog
 
 *Business Relevance:*
 Furniture is the strongest-performing category based on both total sales and total profit. This suggests that it may be an important category for marketing focus and operational planning. Office Supplies may require further investigation to understand its relatively low contribution.
+
+### 3. Monthly Sales Trend
+
+**Business Question:**
+  
+How do sales change over time?
+
+**SQL Analysis:**
+
+```sql
+select
+      extract (year from order_date) as year, 
+      extract (month from order_date) as month,
+      sum(total_sales) as total_sales
+from `ecommerce-sales-portfolio.ecommerce_sales.sales`
+group by year,month
+order by year,month;
+```
+*Result:*
+The query returned 36 monthly records, covering the available three-year period.
+
+*Key Finding:*
+The analysis shows that monthly sales fluctuate throughout the year, with noticeable peaks and lower-performing months. For example, in 2023, February generated approximately $1.61M in sales, while May generated approximately $0.77M. October was another strong month with approximately $1.68M in sales.
+
+*Business Insight:*
+Sales performance is not consistent across all months. Identifying high- and low-performing periods can help the business plan inventory, marketing campaigns, and promotional activities more effectively.
+
+### 4. Top Products by Sales
+
+**Business Question:**
+Which products generate the most sales?
+
+**SQL Analysis:**
+```sql
+select
+  product_name,
+  product_category,
+  sum(total_sales) as total_sales
+from `ecommerce-sales-portfolio.ecommerce_sales.sales`
+group by Product_Name, Product_Category
+order by total_sales desc
+limit 10;
+```
+*Key Finding:*
+The Standing Desk Converter generated the highest total sales at approximately $4.50M, followed by the Ergonomic Office Chair at approximately $4.20M. Furniture products dominated the top of the ranking, with the first four positions occupied by Furniture products.
+
+*Business Insight:*
+The results reinforce the strong performance of the Furniture category. Products such as desks and office chairs appear to be major revenue drivers and could be prioritized for inventory planning, marketing, and promotional strategies.
+
+### 5. Lowest-Profit Products
+
+**Business Question:**
+Which products generate the least profit?
+
+**SQL Analysis:**
+```sql
+select
+  product_name,
+  product_category,
+  sum(profit) as total_profit
+from `ecommerce-sales-portfolio.ecommerce_sales.sales`
+group by Product_Name, Product_Category
+order by total_profit asc
+limit 10;
+```
+*Results:*
+The 10 lowest-profit products were identified, with Paper Clips Box 500pc ranking lowest at -5,529 profit.
+
+*Key Insight:*
+Paper Clips Box 500pc generated a negative profit of -5,529, making it the only loss-making product among the results shown.
+
+*Business Relevance:*
+This product should be investigated for pricing, discounting, or cost issues. Reviewing its profitability could help reduce losses and improve overall margins.
+
+### 9. Sales by Payment Method
+
+**Business Question:***
+Which payment methods generate the most sales?
+
+*Results:*
+
+| Product Category | Total Sales |
+|---|---:|
+|Credit Card |16,417,070|
+|PayPal|12,342,573|
+|Cash on Delivery|6,719,273|
+|Bank Transfer|6,361,748|
+
+*Key Insight:*
+Credit Card generates the highest sales at 16.4M, followed by PayPal at 12.3M.
+
+*Business Relevance:*
+Customers strongly favor digital payment methods, suggesting the business should prioritize and optimize Credit Card and PayPal payment experiences.
 
