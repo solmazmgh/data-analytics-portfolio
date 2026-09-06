@@ -21,7 +21,26 @@ Sales also fluctuate across months, indicating opportunities to improve seasonal
 - *Europe* generated the highest regional profit at approximately *$4.38M, followed closely by North America at *$4.20M**.
 - The average order value was approximately *$20,920.33*.
 - Monthly sales varied throughout the three-year period, highlighting potential seasonal trends and opportunities for improved planning.
-  
+
+## Dashboard
+
+The dashboard highlights key trends and performance across sales, products, profitability, and regions.
+
+### Monthly Sales Trend
+Shows monthly sales fluctuations from 2023–2025.
+
+### Sales by Product Category
+Compares total sales across product categories.
+
+### Profit by Region
+Shows which regions generate the highest total profit.
+
+### Top Products by Sales
+Highlights the highest-selling products.
+
+### Lowest-Profit Products
+Identifies products with the weakest profitability and potential areas for improvement.
+
 ## Business Problem
 The company wants to understand:
 - How sales and profit are performing over time
