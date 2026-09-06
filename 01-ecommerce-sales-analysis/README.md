@@ -3,6 +3,25 @@
 ## Project Overview
 This project analyzes e-commerce sales data to understand revenue, profitability, customer behavior, product performance, and geographic performance.
 The goal is to use data analysis to identify business trends and opportunities that could support better commercial decision-making.
+
+## Executive Summary
+
+The analysis shows that Furniture is the strongest product category, generating the highest sales and total profit. Consumer customers are the most valuable customer segment, leading both sales and profitability.
+
+Credit Card is the most commonly used payment method by sales, followed by PayPal. From a geographic perspective, Europe and North America are the strongest regions for profitability.
+
+Sales also fluctuate across months, indicating opportunities to improve seasonal planning, marketing campaigns, inventory management, and promotional strategies.
+
+### Key Findings
+
+- *Furniture* generated the highest sales at approximately *$2.26M* and the highest total profit at approximately *$7.60M*.
+- *Technology* ranked second in both sales and profit.
+- *Consumer* customers generated the highest sales at approximately *$22.41M* and the highest profit at approximately *$7.95M*.
+- *Credit Card* generated the highest sales among payment methods at approximately *$16.42M, followed by PayPal at *$12.34M**.
+- *Europe* generated the highest regional profit at approximately *$4.38M, followed closely by North America at *$4.20M**.
+- The average order value was approximately *$20,920.33*.
+- Monthly sales varied throughout the three-year period, highlighting potential seasonal trends and opportunities for improved planning.
+  
 ## Business Problem
 The company wants to understand:
 - How sales and profit are performing over time
@@ -59,11 +78,13 @@ The dataset contains 2,000 transactions covering 2023–2025.
 6. Dashboard development
 7. Recommendations
 ## Project Status
-🚧 In progress
-More analysis and visualisations will be added as the project develops.
+✅ Completed core SQL analysis covering sales, profitability, customers, payment methods and geographic performance.
+
 
 ## SQL Analysis
-### 1. Sales by product Category
+
+### 1. Sales by Product Category
+
 ***Business Question:***
 Which product categories generate the most sales?
 
@@ -177,7 +198,7 @@ The Standing Desk Converter generated the highest total sales at approximately $
 
 The results reinforce the strong performance of the Furniture category. Products such as desks and office chairs appear to be major revenue drivers and could be prioritized for inventory planning, marketing, and promotional strategies.
 
-### 5. Lowest-Profit Products
+### 5. Lowest Profit Products
 
 **Business Question:**
 Which products generate the least profit?
@@ -212,7 +233,7 @@ Which payment methods generate the most sales?
 
 *Results:*
 
-| Product Category | Total Sales |
+| Payment Method | Total Sales |
 |---|---:|
 |Credit Card |16,417,070|
 |PayPal|12,342,573|
@@ -227,7 +248,7 @@ Credit Card generates the highest sales at 16.4M, followed by PayPal at 12.3M.
 
 Customers strongly favor digital payment methods, suggesting the business should prioritize and optimize Credit Card and PayPal payment experiences.
 
-### 7. sales by customer segment
+### 7. Sales by Customer Segment
 
 **Business question:**
 Which customer segments generate the most sales?
@@ -275,7 +296,7 @@ ORDER BY total_profit DESC;
 ```
 *Results:*
 
-| customer segment | Total Sales |
+| customer segment | Total Profit |
 |---|---:|
 | Consumer | 7,946,136 |
 | Corporate | 4,067,786 |
@@ -325,7 +346,7 @@ select
 from `ecommerce-sales-portfolio.ecommerce_sales.sales`;
 ```
 *Key Insight:*
-The average order value is approximately $20,920, indicating a relatively high average transaction value.
+The average order value is approximately **$20,920.33**, indicating the average revenue generated per order.
 
 *Business Relevance:*
 Understanding average order value helps the business evaluate customer spending and identify opportunities to increase order size through cross-selling, bundles, or targeted promotions.
