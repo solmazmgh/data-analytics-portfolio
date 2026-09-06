@@ -1,5 +1,5 @@
 # Global E-commerce Sales & Customer Analytics
-**
+**Tools:** SQL | BigQuery | Excel | Data Visualization | GitHub
 ## Project Overview
 This project analyzes e-commerce sales data to understand revenue, profitability, customer behavior, product performance, and geographic performance.
 The goal is to use data analysis to identify business trends and opportunities that could support better commercial decision-making.
