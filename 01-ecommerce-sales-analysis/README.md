@@ -1,4 +1,5 @@
 # Global E-commerce Sales & Customer Analytics
+**
 ## Project Overview
 This project analyzes e-commerce sales data to understand revenue, profitability, customer behavior, product performance, and geographic performance.
 The goal is to use data analysis to identify business trends and opportunities that could support better commercial decision-making.
@@ -47,7 +48,7 @@ The dataset contains 2,000 transactions covering 2023–2025.
 ## Tools
 - SQL
 - Excel
-- Data visualization
+- Data visualisation
 - GitHub
 ## Project Workflow
 1. Data quality assessment
@@ -59,7 +60,7 @@ The dataset contains 2,000 transactions covering 2023–2025.
 7. Recommendations
 ## Project Status
 🚧 In progress
-More analysis and visualizations will be added as the project develops.
+More analysis and visualisations will be added as the project develops.
 
 ## SQL Analysis
 ### 1. Sales by product Category
@@ -84,9 +85,11 @@ order by total_sales desc;
 | Office Supplies | 167,468.8 |
 
 *Key Insight:*  
+
 Furniture generated the highest total sales at 2,261,386.3, while Office Supplies generated the lowest at 167,468.8.
 
 *Business Relevance:*  
+
 This analysis helps identify which product categories contribute most to revenue and can support marketing prioritization and resource allocation.
 
 ### 2. Profit by Product Category
@@ -114,9 +117,11 @@ ORDER BY total_profit DESC;
 | Office Supplies | 307,652 |
 
 *Key Insight:*
+
 Furniture generated the highest total profit at 7,599,018, followed by Technology at 4,334,601. Office Supplies generated the lowest total profit at 307,652.
 
 *Business Relevance:*
+
 Furniture is the strongest-performing category based on both total sales and total profit. This suggests that it may be an important category for marketing focus and operational planning. Office Supplies may require further investigation to understand its relatively low contribution.
 
 ### 3. Monthly Sales Trend
@@ -137,12 +142,15 @@ group by year,month
 order by year,month;
 ```
 *Result:*
+
 The query returned 36 monthly records, covering the available three-year period.
 
 *Key Finding:*
+
 The analysis shows that monthly sales fluctuate throughout the year, with noticeable peaks and lower-performing months. For example, in 2023, February generated approximately $1.61M in sales, while May generated approximately $0.77M. October was another strong month with approximately $1.68M in sales.
 
 *Business Insight:*
+
 Sales performance is not consistent across all months. Identifying high- and low-performing periods can help the business plan inventory, marketing campaigns, and promotional activities more effectively.
 
 ### 4. Top Products by Sales
@@ -162,9 +170,11 @@ order by total_sales desc
 limit 10;
 ```
 *Key Finding:*
+
 The Standing Desk Converter generated the highest total sales at approximately $4.50M, followed by the Ergonomic Office Chair at approximately $4.20M. Furniture products dominated the top of the ranking, with the first four positions occupied by Furniture products.
 
 *Business Insight:*
+
 The results reinforce the strong performance of the Furniture category. Products such as desks and office chairs appear to be major revenue drivers and could be prioritized for inventory planning, marketing, and promotional strategies.
 
 ### 5. Lowest-Profit Products
@@ -184,15 +194,18 @@ order by total_profit asc
 limit 10;
 ```
 *Results:*
+
 The 10 lowest-profit products were identified, with Paper Clips Box 500pc ranking lowest at -5,529 profit.
 
 *Key Insight:*
+
 Paper Clips Box 500pc generated a negative profit of -5,529, making it the only loss-making product among the results shown.
 
 *Business Relevance:*
+
 This product should be investigated for pricing, discounting, or cost issues. Reviewing its profitability could help reduce losses and improve overall margins.
 
-### 9. Sales by Payment Method
+### 6. Sales by Payment Method
 
 **Business Question:***
 Which payment methods generate the most sales?
@@ -207,8 +220,112 @@ Which payment methods generate the most sales?
 |Bank Transfer|6,361,748|
 
 *Key Insight:*
+
 Credit Card generates the highest sales at 16.4M, followed by PayPal at 12.3M.
 
 *Business Relevance:*
+
 Customers strongly favor digital payment methods, suggesting the business should prioritize and optimize Credit Card and PayPal payment experiences.
 
+### 7. sales by customer segment
+
+**Business question:**
+Which customer segments generate the most sales?
+
+**SQL analysis**
+
+```sql
+SELECT
+  Customer_Segment,
+  SUM(Total_Sales) AS total_sales
+FROM ecommerce-sales-portfolio.ecommerce_sales.sales
+GROUP BY Customer_Segment
+ORDER BY total_sales DESC;
+```
+* Results:*
+
+| customer segment | Total Sales |
+|---|---:|
+| Consumer | 22,412,048 |
+| Corporate | 12,446,430 |
+| Home Office | 6,942,186 |
+
+
+*Key Insight:*
+
+Consumer customers generated the highest total sales at 22.4M, followed by Corporate at 12.4M and Home Office at 6.9M.
+
+*Business Relevance:*
+
+Consumer customers are the strongest sales segment, suggesting an opportunity to prioritize marketing and retention efforts toward this customer group.
+
+### 8. Profit by Customer Segment
+
+**Business question:**
+Which customer segments generate the most profit?
+
+**SQL analysis**
+```sql
+SELECT
+  Customer_Segment,
+  SUM(Profit) AS total_profit
+FROM ecommerce-sales-portfolio.ecommerce_sales.sales
+GROUP BY Customer_Segment
+ORDER BY total_profit DESC;
+```
+*Results:*
+
+| customer segment | Total Sales |
+|---|---:|
+| Consumer | 7,946,136 |
+| Corporate | 4,067,786 |
+| Home Office | 2,579,983 |
+
+*Key Insight:*
+
+Consumer customers generated the highest total profit at 7.95M, followed by Corporate at 4.07M and Home Office at 2.58M.
+
+*Business Relevance:*
+
+Consumer customers are the strongest segment for both sales and profit, making them an important target for marketing and customer-retention efforts.
+
+### 9. Profit by Region 
+
+**Business question:**
+
+Which regions generate the most profit?
+
+**SQL analysis**
+```sql
+SELECT
+  Region,
+  SUM(Profit) AS total_profit
+FROM ecommerce-sales-portfolio.ecommerce_sales.sales
+GROUP BY Region
+ORDER BY total_profit DESC;
+```
+
+*Key Insight:*
+
+Europe generated the highest total profit at 4.38M, followed closely by North America at 4.20M. South America and the Middle East & Africa had the lowest profit.
+
+*Business Relevance:*
+
+Europe and North America are the strongest markets for profitability, suggesting these regions could be prioritised for continued marketing and growth efforts.
+
+### 10. Average Order Value
+
+**Business question:**
+What is the average sales value per order?
+
+**SQL Analysis**
+```sql
+select
+ round(avg(total_sales),3) as avg_order_value
+from `ecommerce-sales-portfolio.ecommerce_sales.sales`;
+```
+*Key Insight:*
+The average order value is approximately $20,920, indicating a relatively high average transaction value.
+
+*Business Relevance:*
+Understanding average order value helps the business evaluate customer spending and identify opportunities to increase order size through cross-selling, bundles, or targeted promotions.
