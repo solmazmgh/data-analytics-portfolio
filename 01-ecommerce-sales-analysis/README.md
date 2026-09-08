@@ -34,23 +34,23 @@ Shows monthly sales fluctuations from 2023–2025.
 ### Sales by Product Category
 Compares total sales across product categories.
 
-![Sales by Product Category](dashboard/sales_by_product_category.png)
+![Sales by Product Category](dashboard/total_sales%20by%20Product_Category.png)
 
 ### Profit by Region
 Shows which regions generate the highest total profit.
 
-![Profit by Region](dashboard/profit_by_region.png)
+![Profit by Region](dashboard/total_profit%20by%20Region.png)
 
 ### Top Products by Sales
 Highlights the highest-selling products.
 
-![Top Products by Sales](dashboard/total_sales%by%product_name.png)
+![Top Products by Sales](dashboard/total_sales%20by%20product_name.png)
 
 
 ### Lowest-Profit Products
 Identifies products with the weakest profitability and potential areas for improvement.
 
-![Lowest-Profit Products](dashboard/lowest_profit_products.png)
+![Lowest-Profit Products](dashboard/total_profit%20by%20product_name.png)
 
 ## Business Problem
 The company wants to understand:
