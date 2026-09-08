@@ -57,7 +57,7 @@ The company wants to understand:
 - How sales and profit are performing over time
 - Which products and categories generate the most revenue
 - Which customer segments are most valuable
-- Which countries and regions perform best
+- Which regions perform best
 - Where there may be opportunities to improve profitability
 ## Business Questions
 ### Sales Performance
