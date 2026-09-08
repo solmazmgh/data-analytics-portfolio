@@ -29,17 +29,28 @@ The dashboard highlights key trends and performance across sales, products, prof
 ### Monthly Sales Trend
 Shows monthly sales fluctuations from 2023–2025.
 
+![Monthly Sales Trend](dashboard/monthly_sales_trend.png)
+
 ### Sales by Product Category
 Compares total sales across product categories.
+
+![Sales by Product Category](dashboard/sales_by_product_category.png)
 
 ### Profit by Region
 Shows which regions generate the highest total profit.
 
+![Profit by Region](dashboard/profit_by_region.png)
+
 ### Top Products by Sales
 Highlights the highest-selling products.
 
+![Top Products by Sales](dashboard/top_products_by_sales.png)
+
+
 ### Lowest-Profit Products
 Identifies products with the weakest profitability and potential areas for improvement.
+
+![Lowest-Profit Products](dashboard/lowest_profit_products.png)
 
 ## Business Problem
 The company wants to understand:
