@@ -258,7 +258,8 @@ This product should be investigated for pricing, discounting, or cost issues. Re
 
 ### 6. Sales by Payment Method
 
-**Business Question:***
+**Business Question:**
+
 Which payment methods generate the most sales?
 
 *Results:*
