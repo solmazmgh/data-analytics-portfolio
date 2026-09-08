@@ -29,7 +29,7 @@ The dashboard highlights key trends and performance across sales, products, prof
 ### Monthly Sales Trend
 Shows monthly sales fluctuations from 2023–2025.
 
-![Monthly Sales Trend](dashboard/total_sales%by%month.png)
+![Monthly Sales Trend](dashboard/total_sales%20by%20month.png)
 
 ### Sales by Product Category
 Compares total sales across product categories.
