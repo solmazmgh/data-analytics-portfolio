@@ -29,7 +29,7 @@ The dashboard highlights key trends and performance across sales, products, prof
 ### Monthly Sales Trend
 Shows monthly sales fluctuations from 2023–2025.
 
-![Monthly Sales Trend](dashboard/total_sales by product_name.png)
+![Monthly Sales Trend](dashboard/total_sales%by%month.png)
 
 ### Sales by Product Category
 Compares total sales across product categories.
@@ -44,7 +44,7 @@ Shows which regions generate the highest total profit.
 ### Top Products by Sales
 Highlights the highest-selling products.
 
-![Top Products by Sales](dashboard/top_products_by_sales.png)
+![Top Products by Sales](dashboard/total_sales%by%product_name.png)
 
 
 ### Lowest-Profit Products
